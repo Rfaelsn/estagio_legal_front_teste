@@ -12,6 +12,11 @@ import '@quasar/extras/fontawesome-v6/fontawesome-v6.css'
 // Import Quasar css
 import 'quasar/src/css/index.sass'
 
+/// import bootstrap
+import 'bootstrap/dist/css/bootstrap.css';
+
 createApp(App).use(Quasar, {
     plugins: {}, // import Quasar plugins and add here
   }).mount('#app')
+
+  import 'bootstrap/dist/js/bootstrap.js';
