@@ -11,7 +11,9 @@
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "@quasar/extras": "^1.16.5",
+    "autoprefixer": "^10.4.15",
     "bootstrap": "^5.3.1",
+    "postcss-rtl": "^2.0.0",
     "quasar": "^2.12.5",
     "vue": "^3.3.4"
   },
@@ -19,6 +21,7 @@
     "@quasar/vite-plugin": "^1.4.1",
     "@vitejs/plugin-vue": "^4.2.3",
     "sass": "^1.32.12",
+    "tailwindcss": "^3.3.3",
     "typescript": "^5.2.2",
     "vite": "^4.4.5",
     "vue-tsc": "^1.8.5"
