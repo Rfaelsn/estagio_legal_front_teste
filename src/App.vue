@@ -9,12 +9,15 @@
 @tailwind components;
 @tailwind utilities;
 #app {
+  display: block;
+  background-color: transparent;
+  box-shadow: none;
+  color: inherit;
   margin: 0;
   padding: 0;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  font-family: inherit;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  text-align: inherit;
 }
 </style>

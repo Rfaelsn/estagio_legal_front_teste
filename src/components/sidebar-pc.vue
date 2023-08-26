@@ -5,7 +5,7 @@
     :class="dataOpenSideBar == true ? 'side-bar-visible' : 'side-bar-close'"
   >
     <div
-      class="bg-green-700 h-[50px] flex justify-center items-center border-b border-white"
+      class="bg-green-700 h-[60px] flex justify-center items-center border-b border-white"
     >
       <img
         src="../assets/Logo-IFPA.png"
