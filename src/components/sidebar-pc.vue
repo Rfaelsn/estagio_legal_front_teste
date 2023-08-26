@@ -114,6 +114,9 @@ export default {
 </script>
 
 <style>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .p-tooltip-text {
   font-size: 10px !important;
 }
