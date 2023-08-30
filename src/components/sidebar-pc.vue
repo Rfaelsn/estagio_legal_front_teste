@@ -24,92 +24,27 @@
               class="p-1 w-24 h-24 rounded-full ring-2 ring-gray-300 dark:ring-gray-500 mb-4"
               alt="Avatar"
             />
-            <h5 class="text-xl font-medium leading-tight mb-2">Rafinha vue</h5>
+            <h5 class="text-xl font-medium leading-tight mb-2">Rafael</h5>
             <p class="text-gray-500">Admin</p>
           </div>
         </div>
-        <div
-          class="py-3 rounded-sm cursor-pointer text-gray-300 hover:text-white"
-        >
-          <router-link to="/" class="px-2 flex space-x-2"
-            ><span class="pi pi-microsoft" v-tooltip.right="'Dashboard'"></span>
-            <span v-show="dataOpenSideBar">Dashboard</span></router-link
-          >
-        </div>
-        <div
-          class="py-3 rounded-md cursor-pointer text-gray-300 hover:text-white"
-        >
-          <router-link to="/user" class="px-2 flex space-x-2"
-            ><span class="pi pi-user" v-tooltip.right="'User'"></span>
-            <span v-show="dataOpenSideBar">User</span></router-link
-          >
-        </div>
-        <div
-          class="py-3 rounded-md cursor-pointer text-gray-300 hover:text-white"
-        >
-          <router-link to="/product" class="px-2 flex space-x-2"
-            ><span class="pi pi-cart-plus" v-tooltip.right="'Product'"></span>
-            <span v-show="dataOpenSideBar">Product</span></router-link
-          >
-        </div>
-        <div
-          class="py-3 rounded-md cursor-pointer text-gray-300 hover:text-white"
-        >
-          <router-link to="/contact" class="px-2 flex space-x-2"
-            ><span class="pi pi-whatsapp" v-tooltip.right="'Contact'"></span>
-            <span v-show="dataOpenSideBar">Contact</span></router-link
-          >
-        </div>
-        <div
-          class="py-3 rounded-md cursor-pointer text-gray-300 hover:text-white"
-        >
-          <router-link to="/customer" class="px-2 flex space-x-2"
-            ><span class="pi pi-shield" v-tooltip.right="'Customer'"></span>
-            <span v-show="dataOpenSideBar">Customer</span></router-link
-          >
-        </div>
-        <div
-          class="py-3 rounded-md cursor-pointer text-gray-300 hover:text-white"
-        >
-          <router-link to="/activation" class="px-2 flex space-x-2"
-            ><span
-              class="pi pi-check-circle"
-              v-tooltip.right="'Activation'"
-            ></span>
-            <span v-show="dataOpenSideBar">Activation</span></router-link
-          >
-        </div>
-        <div
-          class="py-3 rounded-md cursor-pointer text-gray-300 hover:text-white"
-        >
-          <div class="px-2 flex space-x-2">
-            <span class="pi pi-slack" v-tooltip.right="'Setting'"></span>
-            <span v-show="dataOpenSideBar">Setting</span>
-          </div>
-        </div>
+        
+        <sidebar-options :dataOpenSideBar = dataOpenSideBar></sidebar-options>
       </div>
-      <div class="menu-man text-left px-2 justify-self-end whitespace-nowrap">
-        <div
-          class="py-3 rounded-md cursor-pointer text-gray-300 hover:text-white"
-        >
-          <a
-            href="https://website-nuxt-front.vercel.app/"
-            target="_blank"
-            class="px-2 flex space-x-2"
-            ><span class="pi pi-question" v-tooltip.right="'About Me'"></span>
-            <span v-show="dataOpenSideBar">About Me</span></a
-          >
-        </div>
-      </div>
+      
     </div>
   </div>
 </template>
 
 <script>
+import sidebarOptions from './sidebar-options.vue';
 export default {
   props: {
     dataOpenSideBar: Boolean,
   },
+  components: {
+    sidebarOptions
+  }
 };
 </script>
 
