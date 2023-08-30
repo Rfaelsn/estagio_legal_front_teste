@@ -1,12 +1,22 @@
 <template>
   <div class="w-full h-full flex">
-    <Sidebar :dataOpenSideBar="openSidebar" />
-    <div class="w-full h-full">
+    
+    <Sidebar 
+    :dataOpenSideBar="openSidebar"
+    :clickHambuger="toggleSidebar" 
+    />
+    
+
+    <!-- Conteúdo Principal -->
+    <div class="flex-1 flex flex-col">
+      <!-- Header -->
       <HeaderTop
         :dataOpenSideBar="openSidebar"
         :clickHambuger="toggleSidebar"
       />
-      <div class="w-full h-[calc(100vh-50px)]">
+
+      <!-- Componente de Roteamento -->
+      <div class="flex-1 overflow-y-auto">
         <router-view></router-view>
       </div>
     </div>

@@ -2,18 +2,21 @@
     <div class="q-pa-md" style="max-width: 250px"
     :class="dataOpenSideBar == true ? 'side-bar-visible' : 'side-bar-close'"
     >
-      <q-list bordered class="rounded-borders">
+      <q-list>
         <q-expansion-item
           expand-separator
           icon="perm_identity"
-          label="Account settings"
-          caption="John Doe"
+          label="Inicio de Estagio"
+          class="text-white flex items-center justify-center"
         >
-          <q-card>
-            <q-card-section class="custom-card-section">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, eius reprehenderit eos corrupti
-              commodi magni quaerat ex numquam, dolorum officiis modi facere maiores architecto suscipit iste
-              eveniet doloribus ullam aliquid.
+          <q-card class="rounded border p-1">
+            <q-card-section class="custom-card-section text-green">
+                <router-link to="/user" class="px-2 flex space-x-2">
+                    <span v-show="dataOpenSideBar">Obrigatório</span>
+                </router-link>
+                <router-link to="/user" class="px-2 flex space-x-2">
+                    <span v-show="dataOpenSideBar">Não obrigatório</span>
+                </router-link>
             </q-card-section>
           </q-card>
         </q-expansion-item>
@@ -21,13 +24,13 @@
         <q-expansion-item
           expand-separator
           icon="signal_wifi_off"
-          label="Wifi settings"
+          label="Fim Estagio"
         >
-          <q-card>
-            <q-card-section>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, eius reprehenderit eos corrupti
-              commodi magni quaerat ex numquam, dolorum officiis modi facere maiores architecto suscipit iste
-              eveniet doloribus ullam aliquid.
+        <q-card class="rounded border p-1">
+            <q-card-section class="custom-card-section text-green">
+                <router-link to="/user" class="px-2 flex space-x-2">
+                    <span v-show="dataOpenSideBar">Emitir Atestado de Estágio</span>
+                </router-link>
             </q-card-section>
           </q-card>
         </q-expansion-item>
@@ -35,24 +38,29 @@
         <q-expansion-item
           expand-separator
           icon="drafts"
-          label="Drafts"
-          header-class="text-purple"
+          label="Acompanhar Estagio"
         >
-          <q-card>
-            <q-card-section>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, eius reprehenderit eos corrupti
-              commodi magni quaerat ex numquam, dolorum officiis modi facere maiores architecto suscipit iste
-              eveniet doloribus ullam aliquid.
+        <q-card class="rounded border p-1">
+            <q-card-section class="custom-card-section text-green">
+                <router-link to="/user" class="px-2 flex space-x-2">
+                    <span v-show="dataOpenSideBar">Obrigatório</span>
+                </router-link>
+                <router-link to="/user" class="px-2 flex space-x-2">
+                    <span v-show="dataOpenSideBar">Não obrigatório</span>
+                </router-link>
             </q-card-section>
           </q-card>
         </q-expansion-item>
   
-        <q-expansion-item icon="assessment" label="Disabled" disable>
-          <q-card>
-            <q-card-section>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, eius reprehenderit eos corrupti
-              commodi magni quaerat ex numquam, dolorum officiis modi facere maiores architecto suscipit iste
-              eveniet doloribus ullam aliquid.
+        <q-expansion-item icon="assessment" label="Configurações" >
+            <q-card class="rounded border p-1">
+            <q-card-section class="custom-card-section text-green">
+                <router-link to="/user" class="px-2 flex space-x-2">
+                    <span v-show="dataOpenSideBar">Obrigatório</span>
+                </router-link>
+                <router-link to="/user" class="px-2 flex space-x-2">
+                    <span v-show="dataOpenSideBar">Não obrigatório</span>
+                </router-link>
             </q-card-section>
           </q-card>
         </q-expansion-item>
@@ -69,11 +77,6 @@
 </script>
 
 <style scoped>
-.custom-card-section {
-  height: 500px; /* Ajuste a altura máxima conforme necessário */
-  overflow: auto; /* Adiciona uma barra de rolagem se o conteúdo exceder a altura máxima */
-}
-
 .side-bar-close{
     width: 50px !important;
 }

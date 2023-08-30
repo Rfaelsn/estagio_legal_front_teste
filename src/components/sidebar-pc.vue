@@ -30,6 +30,10 @@
         </div>
         
         <sidebar-options :dataOpenSideBar = dataOpenSideBar></sidebar-options>
+
+        <div class="border-t border-white">
+          <q-btn @click="clickHambuger" round color="secondary" icon="navigation" />
+        </div>
       </div>
       
     </div>
@@ -39,8 +43,14 @@
 <script>
 import sidebarOptions from './sidebar-options.vue';
 export default {
+  methods: {
+    toggle(event) {
+      this.$refs.menu.toggle(event);
+    },
+  },
   props: {
     dataOpenSideBar: Boolean,
+    clickHambuger: Function,
   },
   components: {
     sidebarOptions
