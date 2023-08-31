@@ -8,6 +8,7 @@
           icon="perm_identity"
           label="Inicio de Estagio"
           class="text-white flex items-center justify-center"
+          :class="{ 'sidebar-close':  !dataOpenSideBar}"
         >
           <q-card class="rounded border p-1">
             <q-card-section class="custom-card-section text-green">
@@ -79,5 +80,11 @@
 <style scoped>
 .side-bar-close{
     width: 50px !important;
+}
+
+.sidebar-close{
+  width: 200px;
+  height: 200px;
+  z-index: 99999999999999;
 }
 </style>
